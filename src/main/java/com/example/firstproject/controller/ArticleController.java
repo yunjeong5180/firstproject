@@ -25,14 +25,17 @@ public class ArticleController
     public String createArticle(ArticleForm form)
     {
         System.out.println(form.toString());
+
         // 1. DTO를 엔티티로 변환
         Article article = form.toEntity();
         // DTO가 엔티티로 잘 변환되는지 확인 출력
         System.out.println(article.toString());
+
         // 2. 리파지터리로 엔티티를 DB에 저장
         Article saved = articleRepository.save(article);
         // article이 DB에 잘 저장되는지 확인 출력
         System.out.println(saved.toString());
+
         return "";
     }
 }

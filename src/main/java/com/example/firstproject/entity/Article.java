@@ -17,7 +17,6 @@ public class Article
     private String content;
     
     // Article 생성자 추가
-
     public Article(Long id, String title, String content)
     {
         this.id = id;
@@ -25,9 +24,7 @@ public class Article
         this.content = content;
     }
 
-
     // toString() 메서드 추가
-
     @Override
     public String toString()
     {
